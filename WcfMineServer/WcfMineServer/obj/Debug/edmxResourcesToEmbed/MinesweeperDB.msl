@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="minesweeper_RonOzeritskyModelStoreContainer" CdmEntityContainer="minesweeper_RonOzeritskyEntities">
+    <EntitySetMapping Name="Clients">
+      <EntityTypeMapping TypeName="minesweeper_RonOzeritskyModel.Client">
+        <MappingFragment StoreEntitySet="Clients">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="GamesPlayed" ColumnName="GamesPlayed" />
+          <ScalarProperty Name="GamesWon" ColumnName="GamesWon" />
+          <ScalarProperty Name="GamesLost" ColumnName="GamesLost" />
+          <ScalarProperty Name="GamesTie" ColumnName="GamesTie" />
+          <ScalarProperty Name="Points" ColumnName="Points" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Games">
+      <EntityTypeMapping TypeName="minesweeper_RonOzeritskyModel.Game">
+        <MappingFragment StoreEntitySet="Games">
+          <ScalarProperty Name="Serial" ColumnName="Serial" />
+          <ScalarProperty Name="Winner" ColumnName="Winner" />
+          <ScalarProperty Name="Loser" ColumnName="Loser" />
+          <ScalarProperty Name="Tie" ColumnName="Tie" />
+          <ScalarProperty Name="GameEnded" ColumnName="GameEnded" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LiveGames">
+      <EntityTypeMapping TypeName="minesweeper_RonOzeritskyModel.LiveGame">
+        <MappingFragment StoreEntitySet="LiveGames">
+          <ScalarProperty Name="Serial" ColumnName="Serial" />
+          <ScalarProperty Name="Player1Name" ColumnName="Player1Name" />
+          <ScalarProperty Name="Player2Name" ColumnName="Player2Name" />
+          <ScalarProperty Name="GameStarted" ColumnName="GameStarted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

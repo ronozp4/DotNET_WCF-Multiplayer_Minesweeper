@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="minesweeper_RonOzeritskyModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Client">
+    <Key>
+      <PropertyRef Name="Name" />
+    </Key>
+    <Property Name="Name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="GamesPlayed" Type="Int32" Nullable="false" />
+    <Property Name="GamesWon" Type="Int32" Nullable="false" />
+    <Property Name="GamesLost" Type="Int32" Nullable="false" />
+    <Property Name="Points" Type="Int32" Nullable="false" />
+    <Property Name="Client_Name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Clients1" Relationship="Self.FK_dbo_Clients_dbo_Clients_Client_Name" FromRole="Clients" ToRole="Clients1" />
+    <NavigationProperty Name="Client1" Relationship="Self.FK_dbo_Clients_dbo_Clients_Client_Name" FromRole="Clients1" ToRole="Clients" />
+  </EntityType>
+  <EntityType Name="Game">
+    <Key>
+      <PropertyRef Name="Serial" />
+    </Key>
+    <Property Name="Serial" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Winner" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="loserer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="GameEnded" Type="Boolean" Nullable="false" />
+    <Property Name="Game_Serial" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Games1" Relationship="Self.FK_dbo_Games_dbo_Games_Game_Serial" FromRole="Games" ToRole="Games1" />
+    <NavigationProperty Name="Game1" Relationship="Self.FK_dbo_Games_dbo_Games_Game_Serial" FromRole="Games1" ToRole="Games" />
+  </EntityType>
+  <EntityType Name="LiveGame">
+    <Key>
+      <PropertyRef Name="Serial" />
+    </Key>
+    <Property Name="Serial" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Player1Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Player2Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="GameStarted" Type="Boolean" Nullable="false" />
+    <Property Name="LiveGame_Serial" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="LiveGames1" Relationship="Self.FK_dbo_LiveGames_dbo_LiveGames_LiveGame_Serial" FromRole="LiveGames" ToRole="LiveGames1" />
+    <NavigationProperty Name="LiveGame1" Relationship="Self.FK_dbo_LiveGames_dbo_LiveGames_LiveGame_Serial" FromRole="LiveGames1" ToRole="LiveGames" />
+  </EntityType>
+  <Association Name="FK_dbo_Clients_dbo_Clients_Client_Name">
+    <End Role="Clients" Type="Self.Client" Multiplicity="0..1" />
+    <End Role="Clients1" Type="Self.Client" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Clients">
+        <PropertyRef Name="Name" />
+      </Principal>
+      <Dependent Role="Clients1">
+        <PropertyRef Name="Client_Name" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_Games_dbo_Games_Game_Serial">
+    <End Role="Games" Type="Self.Game" Multiplicity="0..1" />
+    <End Role="Games1" Type="Self.Game" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Games">
+        <PropertyRef Name="Serial" />
+      </Principal>
+      <Dependent Role="Games1">
+        <PropertyRef Name="Game_Serial" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_LiveGames_dbo_LiveGames_LiveGame_Serial">
+    <End Role="LiveGames" Type="Self.LiveGame" Multiplicity="0..1" />
+    <End Role="LiveGames1" Type="Self.LiveGame" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LiveGames">
+        <PropertyRef Name="Serial" />
+      </Principal>
+      <Dependent Role="LiveGames1">
+        <PropertyRef Name="LiveGame_Serial" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="minesweeper_RonOzeritskyEntitie" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Clients" EntityType="Self.Client" />
+    <EntitySet Name="Games" EntityType="Self.Game" />
+    <EntitySet Name="LiveGames" EntityType="Self.LiveGame" />
+    <AssociationSet Name="FK_dbo_Clients_dbo_Clients_Client_Name" Association="Self.FK_dbo_Clients_dbo_Clients_Client_Name">
+      <End Role="Clients" EntitySet="Clients" />
+      <End Role="Clients1" EntitySet="Clients" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_Games_dbo_Games_Game_Serial" Association="Self.FK_dbo_Games_dbo_Games_Game_Serial">
+      <End Role="Games" EntitySet="Games" />
+      <End Role="Games1" EntitySet="Games" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_LiveGames_dbo_LiveGames_LiveGame_Serial" Association="Self.FK_dbo_LiveGames_dbo_LiveGames_LiveGame_Serial">
+      <End Role="LiveGames" EntitySet="LiveGames" />
+      <End Role="LiveGames1" EntitySet="LiveGames" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
