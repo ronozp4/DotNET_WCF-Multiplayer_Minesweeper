@@ -1,4 +1,4 @@
-Ho to use:
+How to use:
 1. Copy "databases" folder to C:\  .
 2. Open "MineHost" -  \MineHost\MineHost\bin\Debug\MineHost.exe .
 3.Open "MineClient" -  \MineClient\MineClient\bin\Debug\MineClient.exe . 
