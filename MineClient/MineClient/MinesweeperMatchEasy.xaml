@@ -1,0 +1,162 @@
+﻿<Window x:Class="MineClient.MinesweeperMatchEasy"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MineClient"
+        mc:Ignorable="d"
+      Title="Minesweeper Match" Height="600" Width="520" Loaded="Window_Loaded" ResizeMode="NoResize" Closed="Window_Closed">
+
+
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                <GradientStop Color="Black" Offset="1"/>
+                <GradientStop Color="#FF1A2AD3"/>
+                <GradientStop Color="#FFD6D7E6" Offset="0.864"/>
+                <GradientStop Color="#FF7E7F8D" Offset="0.707"/>
+                <GradientStop Color="#FF46474E" Offset="0.939"/>
+                <GradientStop Color="#FFFBFBFF" Offset="0.109"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+           
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+           
+        </Grid.RowDefinitions>
+        <ToolBarOverflowPanel Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="9" >
+
+
+            <Label   Content="Level= Easy"  Margin="0,0,0,0" FontSize="16" FontWeight="Bold" />
+            <Label   Content="        " Margin="0,0,0,0" FontSize="16" FontWeight="Bold" />
+            <Label   Content="Turn of: " Margin="0,0,0,0" FontSize="16" FontWeight="Bold" />
+            <Label   Name="Turn_lbl" Content="           " Margin="0,0,0,0" FontSize="16" FontWeight="Bold" />
+
+        </ToolBarOverflowPanel>
+        <WrapPanel Name="A1"  Grid.Row="1" Grid.ColumnSpan="9" >
+        <Button FontSize="16" FontWeight="Bold" Background="White" MouseRightButtonUp="MouseRightButtonUp" x:Name="a0000" Click="MouseClick" Grid.Row="1" Grid.Column="0" Width="56" Height="58"/>
+        <Button FontSize="16" FontWeight="Bold" Background="White" MouseRightButtonUp="MouseRightButtonUp" x:Name="a0001" Click="MouseClick" Grid.Row="1" Grid.Column="1" Width="56"/>
+        <Button FontSize="16" FontWeight="Bold" Background="White" MouseRightButtonUp="MouseRightButtonUp" x:Name="a0002" Click="MouseClick" Grid.Row="1" Grid.Column="2" Width="56"/>
+        <Button FontSize="16" FontWeight="Bold" Background="White" MouseRightButtonUp="MouseRightButtonUp" x:Name="a0003" Click="MouseClick" Grid.Row="1" Grid.Column="3" Width="56" />
+        <Button FontSize="16" FontWeight="Bold" Background="White" MouseRightButtonUp="MouseRightButtonUp" x:Name="a0004" Click="MouseClick" Grid.Row="1" Grid.Column="4" Width="56" />
+        <Button FontSize="16" FontWeight="Bold" Background="White" MouseRightButtonUp="MouseRightButtonUp" x:Name="a0005" Click="MouseClick" Grid.Row="1" Grid.Column="5" Width="56" />
+        <Button FontSize="16" FontWeight="Bold" Background="White" MouseRightButtonUp="MouseRightButtonUp" x:Name="a0006" Click="MouseClick" Grid.Row="1" Grid.Column="6" Width="56" />
+        <Button FontSize="16" FontWeight="Bold" Background="White" MouseRightButtonUp="MouseRightButtonUp" x:Name="a0007" Click="MouseClick" Grid.Row="1" Grid.Column="7" Width="56" />
+        <Button FontSize="16" FontWeight="Bold" Background="White" MouseRightButtonUp="MouseRightButtonUp" x:Name="a0008" Click="MouseClick" Grid.Row="1" Grid.Column="8" Width="56" />
+        </WrapPanel>
+        <WrapPanel Name="A2"  Grid.Row="2" Grid.ColumnSpan="9" >
+            <Button FontSize="16" FontWeight="Bold" Background="White" MouseRightButtonUp="MouseRightButtonUp" x:Name="a0100" Click="MouseClick" Grid.Row="2" Grid.Column="0" Width="56" Height="58" />
+        <Button FontSize="16" FontWeight="Bold" Background="White" MouseRightButtonUp="MouseRightButtonUp" x:Name="a0101" Click="MouseClick" Grid.Row="2" Grid.Column="1" Width="56" />
+        <Button FontSize="16" FontWeight="Bold" Background="White" MouseRightButtonUp="MouseRightButtonUp" x:Name="a0102" Click="MouseClick" Grid.Row="2" Grid.Column="2" Width="56" />
+        <Button FontSize="16" FontWeight="Bold" Background="White" MouseRightButtonUp="MouseRightButtonUp" x:Name="a0103" Click="MouseClick" Grid.Row="2" Grid.Column="3" Width="56" />
+        <Button FontSize="16" FontWeight="Bold" Background="White" MouseRightButtonUp="MouseRightButtonUp" x:Name="a0104" Click="MouseClick" Grid.Row="2" Grid.Column="4" Width="56" />
+        <Button FontSize="16" FontWeight="Bold" Background="White" MouseRightButtonUp="MouseRightButtonUp" x:Name="a0105" Click="MouseClick" Grid.Row="2" Grid.Column="5" Width="56" />
+        <Button FontSize="16" FontWeight="Bold" Background="White" MouseRightButtonUp="MouseRightButtonUp" x:Name="a0106" Click="MouseClick" Grid.Row="2" Grid.Column="6" Width="56" />
+        <Button FontSize="16" FontWeight="Bold" Background="White" MouseRightButtonUp="MouseRightButtonUp" x:Name="a0107" Click="MouseClick" Grid.Row="2" Grid.Column="7" Width="56" />
+        <Button FontSize="16" FontWeight="Bold" Background="White" MouseRightButtonUp="MouseRightButtonUp" x:Name="a0108" Click="MouseClick" Grid.Row="2" Grid.Column="8" Width="56" />
+        </WrapPanel>
+        <WrapPanel Name="A3"  Grid.Row="3" Grid.ColumnSpan="9" >
+            <Button FontSize="16" FontWeight="Bold" Background="White" MouseRightButtonUp="MouseRightButtonUp" x:Name="a0200" Click="MouseClick" Grid.Row="3" Width="56" Grid.Column="0" Height="58" />
+        <Button FontSize="16" FontWeight="Bold" Background="White" MouseRightButtonUp="MouseRightButtonUp" x:Name="a0201" Click="MouseClick" Grid.Row="3" Width="56" Grid.Column="1" />
+        <Button FontSize="16" FontWeight="Bold" Background="White" MouseRightButtonUp="MouseRightButtonUp" x:Name="a0202" Click="MouseClick" Grid.Row="3" Width="56" Grid.Column="2" />
+        <Button FontSize="16" FontWeight="Bold" Background="White" MouseRightButtonUp="MouseRightButtonUp" x:Name="a0203" Click="MouseClick" Grid.Row="3" Width="56" Grid.Column="3" />
+        <Button FontSize="16" FontWeight="Bold" Background="White" MouseRightButtonUp="MouseRightButtonUp" x:Name="a0204" Click="MouseClick" Grid.Row="3" Width="56" Grid.Column="4" />
+        <Button FontSize="16" FontWeight="Bold" Background="White" MouseRightButtonUp="MouseRightButtonUp" x:Name="a0205" Click="MouseClick" Grid.Row="3" Width="56" Grid.Column="5" />
+        <Button FontSize="16" FontWeight="Bold" Background="White" MouseRightButtonUp="MouseRightButtonUp" x:Name="a0206" Click="MouseClick" Grid.Row="3" Width="56" Grid.Column="6" />
+        <Button FontSize="16" FontWeight="Bold" Background="White" MouseRightButtonUp="MouseRightButtonUp" x:Name="a0207" Click="MouseClick" Grid.Row="3" Width="56" Grid.Column="7" />
+        <Button FontSize="16" FontWeight="Bold" Background="White" MouseRightButtonUp="MouseRightButtonUp" x:Name="a0208" Click="MouseClick" Grid.Row="3" Width="56" Grid.Column="8" />
+        </WrapPanel>
+        <WrapPanel Name="A4"  Grid.Row="4" Grid.ColumnSpan="9" >
+            <Button FontSize="16" FontWeight="Bold" Background="White" MouseRightButtonUp="MouseRightButtonUp" x:Name="a0300" Click="MouseClick" Grid.Row="4" Grid.Column="0" Width="56" Height="58"/>
+        <Button FontSize="16" FontWeight="Bold" Background="White" MouseRightButtonUp="MouseRightButtonUp" x:Name="a0301" Click="MouseClick" Grid.Row="4" Grid.Column="1" Width="56" />
+        <Button FontSize="16" FontWeight="Bold" Background="White" MouseRightButtonUp="MouseRightButtonUp" x:Name="a0302" Click="MouseClick" Grid.Row="4" Grid.Column="2" Width="56" />
+        <Button FontSize="16" FontWeight="Bold" Background="White" MouseRightButtonUp="MouseRightButtonUp" x:Name="a0303" Click="MouseClick" Grid.Row="4" Grid.Column="3" Width="56" />
+        <Button FontSize="16" FontWeight="Bold" Background="White" MouseRightButtonUp="MouseRightButtonUp" x:Name="a0304" Click="MouseClick" Grid.Row="4" Grid.Column="4" Width="56" />
+        <Button FontSize="16" FontWeight="Bold" Background="White" MouseRightButtonUp="MouseRightButtonUp" x:Name="a0305" Click="MouseClick" Grid.Row="4" Grid.Column="5" Width="56" />
+        <Button FontSize="16" FontWeight="Bold" Background="White" MouseRightButtonUp="MouseRightButtonUp" x:Name="a0306" Click="MouseClick" Grid.Row="4" Grid.Column="6" Width="56" />
+        <Button FontSize="16" FontWeight="Bold" Background="White" MouseRightButtonUp="MouseRightButtonUp" x:Name="a0307" Click="MouseClick" Grid.Row="4" Grid.Column="7" Width="56" />
+        <Button FontSize="16" FontWeight="Bold" Background="White" MouseRightButtonUp="MouseRightButtonUp" x:Name="a0308" Click="MouseClick" Grid.Row="4" Grid.Column="8" Width="56" />
+        </WrapPanel>
+
+        <WrapPanel Name="A5"  Grid.Row="5" Grid.ColumnSpan="9" >
+            <Button FontSize="16" FontWeight="Bold" Background="White" MouseRightButtonUp="MouseRightButtonUp" x:Name="a0400" Click="MouseClick" Grid.Row="5" Grid.Column="0" Width="56" Height="58"/>
+        <Button FontSize="16" FontWeight="Bold" Background="White" MouseRightButtonUp="MouseRightButtonUp" x:Name="a0401" Click="MouseClick" Grid.Row="5" Grid.Column="1" Width="56" />
+        <Button FontSize="16" FontWeight="Bold" Background="White" MouseRightButtonUp="MouseRightButtonUp" x:Name="a0402" Click="MouseClick" Grid.Row="5" Grid.Column="2" Width="56" />
+        <Button FontSize="16" FontWeight="Bold" Background="White" MouseRightButtonUp="MouseRightButtonUp" x:Name="a0403" Click="MouseClick" Grid.Row="5" Grid.Column="3" Width="56" />
+        <Button FontSize="16" FontWeight="Bold" Background="White" MouseRightButtonUp="MouseRightButtonUp" x:Name="a0404" Click="MouseClick" Grid.Row="5" Grid.Column="4" Width="56" />
+        <Button FontSize="16" FontWeight="Bold" Background="White" MouseRightButtonUp="MouseRightButtonUp" x:Name="a0405" Click="MouseClick" Grid.Row="5" Grid.Column="5" Width="56" />
+        <Button FontSize="16" FontWeight="Bold" Background="White" MouseRightButtonUp="MouseRightButtonUp" x:Name="a0406" Click="MouseClick" Grid.Row="5" Grid.Column="6" Width="56" />
+        <Button FontSize="16" FontWeight="Bold" Background="White" MouseRightButtonUp="MouseRightButtonUp" x:Name="a0407" Click="MouseClick" Grid.Row="5" Grid.Column="7" Width="56" />
+        <Button FontSize="16" FontWeight="Bold" Background="White" MouseRightButtonUp="MouseRightButtonUp" x:Name="a0408" Click="MouseClick" Grid.Row="5" Grid.Column="8" Width="56" />
+        </WrapPanel>
+        <WrapPanel Name="A6"  Grid.Row="6" Grid.ColumnSpan="9" >
+            <Button FontSize="16" FontWeight="Bold" Background="White" MouseRightButtonUp="MouseRightButtonUp" x:Name="a0500" Click="MouseClick" Grid.Row="6" Grid.Column="0" Width="56" Height="58"/>
+        <Button FontSize="16" FontWeight="Bold" Background="White" MouseRightButtonUp="MouseRightButtonUp" x:Name="a0501" Click="MouseClick" Grid.Row="6" Grid.Column="1" Width="56" />
+        <Button FontSize="16" FontWeight="Bold" Background="White" MouseRightButtonUp="MouseRightButtonUp" x:Name="a0502" Click="MouseClick" Grid.Row="6" Grid.Column="2" Width="56" />
+        <Button FontSize="16" FontWeight="Bold" Background="White" MouseRightButtonUp="MouseRightButtonUp" x:Name="a0503" Click="MouseClick" Grid.Row="6" Grid.Column="3" Width="56" />
+        <Button FontSize="16" FontWeight="Bold" Background="White" MouseRightButtonUp="MouseRightButtonUp" x:Name="a0504" Click="MouseClick" Grid.Row="6" Grid.Column="4" Width="56" />
+        <Button FontSize="16" FontWeight="Bold" Background="White" MouseRightButtonUp="MouseRightButtonUp" x:Name="a0505" Click="MouseClick" Grid.Row="6" Grid.Column="5" Width="56" />
+        <Button FontSize="16" FontWeight="Bold" Background="White" MouseRightButtonUp="MouseRightButtonUp" x:Name="a0506" Click="MouseClick" Grid.Row="6" Grid.Column="6" Width="56" />
+        <Button FontSize="16" FontWeight="Bold" Background="White" MouseRightButtonUp="MouseRightButtonUp" x:Name="a0507" Click="MouseClick" Grid.Row="6" Grid.Column="7" Width="56" />
+        <Button FontSize="16" FontWeight="Bold" Background="White" MouseRightButtonUp="MouseRightButtonUp" x:Name="a0508" Click="MouseClick" Grid.Row="6" Grid.Column="8" Width="56" />
+        </WrapPanel>
+        <WrapPanel Name="A7"  Grid.Row="7" Grid.ColumnSpan="9" >
+            <Button FontSize="16" FontWeight="Bold" Background="White" MouseRightButtonUp="MouseRightButtonUp" x:Name="a0600" Click="MouseClick" Grid.Row="7" Grid.Column="0" Width="56" Height="58"/>
+        <Button FontSize="16" FontWeight="Bold" Background="White" MouseRightButtonUp="MouseRightButtonUp" x:Name="a0601" Click="MouseClick" Grid.Row="7" Grid.Column="1" Width="56" />
+        <Button FontSize="16" FontWeight="Bold" Background="White" MouseRightButtonUp="MouseRightButtonUp" x:Name="a0602" Click="MouseClick" Grid.Row="7" Grid.Column="2" Width="56" />
+        <Button FontSize="16" FontWeight="Bold" Background="White" MouseRightButtonUp="MouseRightButtonUp" x:Name="a0603" Click="MouseClick" Grid.Row="7" Grid.Column="3" Width="56" />
+        <Button FontSize="16" FontWeight="Bold" Background="White" MouseRightButtonUp="MouseRightButtonUp" x:Name="a0604" Click="MouseClick" Grid.Row="7" Grid.Column="4" Width="56" />
+        <Button FontSize="16" FontWeight="Bold" Background="White" MouseRightButtonUp="MouseRightButtonUp" x:Name="a0605" Click="MouseClick" Grid.Row="7" Grid.Column="5" Width="56" />
+        <Button FontSize="16" FontWeight="Bold" Background="White" MouseRightButtonUp="MouseRightButtonUp" x:Name="a0606" Click="MouseClick" Grid.Row="7" Grid.Column="6" Width="56" />
+        <Button FontSize="16" FontWeight="Bold" Background="White" MouseRightButtonUp="MouseRightButtonUp" x:Name="a0607" Click="MouseClick" Grid.Row="7" Grid.Column="7" Width="56" />
+        <Button FontSize="16" FontWeight="Bold" Background="White" MouseRightButtonUp="MouseRightButtonUp" x:Name="a0608" Click="MouseClick" Grid.Row="7" Grid.Column="8" Width="56" />
+        </WrapPanel>
+        <WrapPanel Name="A8"  Grid.Row="8" Grid.ColumnSpan="9" >
+            <Button FontSize="16" FontWeight="Bold" Background="White" MouseRightButtonUp="MouseRightButtonUp" x:Name="a0700" Click="MouseClick" Grid.Row="8" Grid.Column="0" Width="56" Height="58"/>
+        <Button FontSize="16" FontWeight="Bold" Background="White" MouseRightButtonUp="MouseRightButtonUp" x:Name="a0701" Click="MouseClick" Grid.Row="8" Grid.Column="1" Width="56" />
+        <Button FontSize="16" FontWeight="Bold" Background="White" MouseRightButtonUp="MouseRightButtonUp" x:Name="a0702" Click="MouseClick" Grid.Row="8" Grid.Column="2" Width="56" />
+        <Button FontSize="16" FontWeight="Bold" Background="White" MouseRightButtonUp="MouseRightButtonUp" x:Name="a0703" Click="MouseClick" Grid.Row="8" Grid.Column="3" Width="56" />
+        <Button FontSize="16" FontWeight="Bold" Background="White" MouseRightButtonUp="MouseRightButtonUp" x:Name="a0704" Click="MouseClick" Grid.Row="8" Grid.Column="4" Width="56" />
+        <Button FontSize="16" FontWeight="Bold" Background="White" MouseRightButtonUp="MouseRightButtonUp" x:Name="a0705" Click="MouseClick" Grid.Row="8" Grid.Column="5" Width="56" />
+        <Button FontSize="16" FontWeight="Bold" Background="White" MouseRightButtonUp="MouseRightButtonUp" x:Name="a0706" Click="MouseClick" Grid.Row="8" Grid.Column="6" Width="56" />
+        <Button FontSize="16" FontWeight="Bold" Background="White" MouseRightButtonUp="MouseRightButtonUp" x:Name="a0707" Click="MouseClick" Grid.Row="8" Grid.Column="7" Width="56" />
+        <Button FontSize="16" FontWeight="Bold" Background="White" MouseRightButtonUp="MouseRightButtonUp" x:Name="a0708" Click="MouseClick" Grid.Row="8" Grid.Column="8" Width="56" />
+        </WrapPanel>
+        <WrapPanel Name="A9"  Grid.Row="9" Grid.ColumnSpan="9" >
+            <Button FontSize="16" FontWeight="Bold" Background="White" MouseRightButtonUp="MouseRightButtonUp" x:Name="a0800" Click="MouseClick" Grid.Row="9" Grid.Column="0" Width="56" Height="58"/>
+        <Button FontSize="16" FontWeight="Bold" Background="White" MouseRightButtonUp="MouseRightButtonUp" x:Name="a0801" Click="MouseClick" Grid.Row="9" Grid.Column="1" Width="56" />
+        <Button FontSize="16" FontWeight="Bold" Background="White" MouseRightButtonUp="MouseRightButtonUp" x:Name="a0802" Click="MouseClick" Grid.Row="9" Grid.Column="2" Width="56" />
+        <Button FontSize="16" FontWeight="Bold" Background="White" MouseRightButtonUp="MouseRightButtonUp" x:Name="a0803" Click="MouseClick" Grid.Row="9" Grid.Column="3" Width="56" />
+        <Button FontSize="16" FontWeight="Bold" Background="White" MouseRightButtonUp="MouseRightButtonUp" x:Name="a0804" Click="MouseClick" Grid.Row="9" Grid.Column="4" Width="56" />
+        <Button FontSize="16" FontWeight="Bold" Background="White" MouseRightButtonUp="MouseRightButtonUp" x:Name="a0805" Click="MouseClick" Grid.Row="9" Grid.Column="5" Width="56" />
+        <Button FontSize="16" FontWeight="Bold" Background="White" MouseRightButtonUp="MouseRightButtonUp" x:Name="a0806" Click="MouseClick" Grid.Row="9" Grid.Column="6" Width="56" />
+        <Button FontSize="16" FontWeight="Bold" Background="White" MouseRightButtonUp="MouseRightButtonUp" x:Name="a0807" Click="MouseClick" Grid.Row="9" Grid.Column="7" Width="56" />
+        <Button FontSize="16" FontWeight="Bold" Background="White" MouseRightButtonUp="MouseRightButtonUp" x:Name="a0808" Click="MouseClick" Grid.Row="9" Grid.Column="8" Width="56" />
+        </WrapPanel>
+        
+
+
+    </Grid>
+</Window>

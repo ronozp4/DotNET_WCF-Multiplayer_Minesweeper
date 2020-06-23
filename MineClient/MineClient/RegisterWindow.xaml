@@ -1,0 +1,19 @@
+﻿<Window x:Class="MineClient.RegisterWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MineClient"
+        mc:Ignorable="d"
+           Title="Register" Height="200" Width="300" Closed="Window_Closed" Loaded="Window_Loaded" ResizeMode="NoResize">
+    <Window.Background>
+        <ImageBrush ImageSource="mine.jpg"/>
+    </Window.Background>
+    <StackPanel>
+        <Label Background="{x:Null}" Foreground="Red" HorizontalAlignment="Center" FontWeight="Bold" FontSize="16" FontFamily="Times New Roman">Choose Username:</Label>
+        <TextBox Margin="20,5,20,5" Name="tbUsername"/>
+        <Label FontWeight="Bold" FontSize="16" Foreground="Red" HorizontalAlignment="Center" FontFamily="Times New Roman">Choose Password:</Label>
+        <TextBox Margin="20,5,20,20" Name="tbPassword" Keyboard.KeyDown="Button_KeyDown"/>
+        <Button Margin="50,0,50,0" Content="Rgister" Click="Button_Click" />
+    </StackPanel>
+</Window>
