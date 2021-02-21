@@ -1,8 +1,8 @@
 How to use:
-First we need to Build Solution (.sln files) -IN THE ORDER BELOW
+Build Solution (.sln files) -IN THE ORDER BELOW
 1. WcfMineServer\WcfMineServer.sln
 2. MineHost\MineHost.sln
-3. MineClient\MineClient.sln
+3. MineClient\MineClient.sln (Build x2)
 After the build we will have bin folders
 
 4. Copy "databases" folder to C:\  .
