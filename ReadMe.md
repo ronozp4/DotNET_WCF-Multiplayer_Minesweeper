@@ -18,10 +18,11 @@ user: ron103 ; password: ron103
 user: ron104 ; password: ron104  
 user: ron105 ; password: ron105  
 
-
+Screenshots:  
 ![Alt text](/Screenshots/Screenshot1.png?raw=true "Loby")
-![Alt text](/Screenshots/Screenshot2.png?raw=true "Solo Game")  
 ![Alt text](/Screenshots/Screenshot3.png?raw=true "Multiplayer")  
+![Alt text](/Screenshots/Screenshot2.png?raw=true "Solo Game")  
+
 
 
 
