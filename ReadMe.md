@@ -1,8 +1,8 @@
-How to use:
+How to use:  
 Build Solution (.sln files) -IN THE ORDER BELOW
-1. WcfMineServer\WcfMineServer.sln
-2. MineHost\MineHost.sln
-3. MineClient\MineClient.sln (Build x2)
+1. WcfMineServer\WcfMineServer.sln  
+2. MineHost\MineHost.sln  
+3. MineClient\MineClient.sln (Build x2)  
 After the build we will have bin folders  
   
 4. Copy "databases" folder to C:\  .  
@@ -19,9 +19,9 @@ user: ron104 ; password: ron104
 user: ron105 ; password: ron105  
 
 
-![Alt text](Screensots/Screenshot1.png?raw=true "Loby")  
-![Alt text](Screensots/Screenshot2.png?raw=true "Solo Game")  
-![Alt text](Screensots/Screenshot3.png?raw=true "Multiplayer")  
+![Alt text](/Screenshots/Screenshot1.png?raw=true "Loby")  
+![Alt text](/Screenshots/Screenshot2.png?raw=true "Solo Game")  
+![Alt text](/Screenshots/Screenshot3.png?raw=true "Multiplayer")  
 
 
 
