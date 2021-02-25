@@ -19,9 +19,9 @@ user: ron104 ; password: ron104
 user: ron105 ; password: ron105
 
 
-![Alt text](Screenshot1.png?raw=true "Loby")
-![Alt text](Screenshot2.png?raw=true "Solo Game")
-![Alt text](Screenshot3.png?raw=true "Multiplayer")
+![Alt text](/Screensots/Screenshot1.png?raw=true "Loby")
+![Alt text](/Screensots/Screenshot2.png?raw=true "Solo Game")
+![Alt text](/Screensots/Screenshot3.png?raw=true "Multiplayer")
 
 
 
